@@ -6,8 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "storybook": "start-storybook -s ./public -p 6006",
-    "build-storybook": "build-storybook -s ./public",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
     "lint": "eslint \"**/*.{js,jsx,ts,tsx}\"",
     "test": "tsc && eslint \"**/*.{js,jsx,ts,tsx}\""
   },
