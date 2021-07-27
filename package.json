@@ -1,0 +1,58 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": false,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "storybook": "start-storybook -s ./public -p 6006",
+    "build-storybook": "build-storybook -s ./public",
+    "lint": "eslint \"**/*.{js,jsx,ts,tsx}\"",
+    "test": "tsc && eslint \"**/*.{js,jsx,ts,tsx}\""
+  },
+  "comments": [
+    {
+      "dependency": "tslib",
+      "comment": "The current version ^3.0.5 of the package 'storybook-addon-next-router', is bugged when using npm at the moment. Therefore we need to install tslib's latest version. An issue for this is already uploaded on the project's github page: https://github.com/lifeiscontent/storybook-addon-next-router/issues/29"
+    }
+  ],
+  "dependencies": {
+    "@babel/preset-react": "^7.14.5",
+    "@emotion/react": "^11.4.0",
+    "@emotion/styled": "^11.3.0",
+    "@theme-ui/css": "^0.10.1",
+    "csstype": "^3.0.8",
+    "next": "^11.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "theme-ui": "^0.10.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-react-jsx": "^7.14.5",
+    "@emotion/babel-plugin": "^11.3.0",
+    "@storybook/addon-a11y": "^6.3.5",
+    "@storybook/addon-actions": "^6.3.5",
+    "@storybook/addon-essentials": "^6.3.5",
+    "@storybook/addon-links": "^6.3.5",
+    "@storybook/react": "^6.3.5",
+    "@types/node": "^14.17.5",
+    "@types/react": "^17.0.14",
+    "@types/react-dom": "^17.0.9",
+    "@typescript-eslint/eslint-plugin": "^4.28.4",
+    "@typescript-eslint/parser": "^4.28.4",
+    "babel-loader": "^8.2.2",
+    "eslint": "^7.31.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-next": "^11.0.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.24.0",
+    "prettier": "^2.3.2",
+    "storybook-addon-next-router": "^3.0.5",
+    "storybook-css-modules-preset": "^1.1.1",
+    "tslib": "^2.3.0",
+    "typescript": "^4.3.5"
+  }
+}
