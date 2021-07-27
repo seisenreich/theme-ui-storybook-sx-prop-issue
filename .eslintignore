@@ -1,0 +1,5 @@
+# ignore storybook's build directory
+storybook-static/*
+
+# ignore Next.JS's build directory
+.next/*

@@ -1,0 +1,70 @@
+{
+  "env": {
+    "node": true,
+    "browser": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "airbnb",
+    "next",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "ecmaFeatures": { "jsx": true },
+    "sourceType": "module"
+  },
+  "rules": {
+    "semi": ["error", "never"],
+    "no-use-before-define": "off",
+    // "jsx-a11y/anchor-is-valid": ["warn"], // a-tags should lead to urls, else use button elements!
+    // not recommended for typescript projects -> turn off
+    "no-undef": ["off"],
+    "react/jsx-props-no-spreading": "off",
+    "no-nested-ternary": ["warn"],
+    "no-shadow": "off", // Sometimes you don't want to come up with other names when you already have the perfect one
+    "implicit-arrow-linebreak": 0,
+    "import/no-unresolved": 0,
+    "import/extensions": 0,
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".tsx"]
+      }
+    ],
+    "react/prop-types": "off",
+    "react/require-default-props": "off",
+    // not recommended for typescript projects -> turn off
+    "no-unused-vars": "off",
+    "no-undef-init": "off",
+    "@typescript-eslint/no-unused-vars": ["error"],
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}], // Dev dependencies may be imported!
+    "import/prefer-default-export": "off", // I prefer named exports for most things because it will be renamed properly
+    "no-empty-function": "off", // Use typescript variant of it
+    "@typescript-eslint/no-empty-function": "off", // Handy for non-optional event props
+    "@typescript-eslint/explicit-module-boundary-types": "off", // Implicit return types are fine
+    "react/no-unescaped-entities": "off", // This won't cause problems in our code
+    "react/no-array-index-key": "off", // Not always evil!
+    "@typescript-eslint/no-empty-interface": "off", // Handy for renaming interfaces by context
+    "import/no-cycle": "off", // Too many false-positives
+    "quotes": "off", // Template strings should be allowed!
+    "react/jsx-curly-brace-presence": "off", // It doesn't matter if it's <Foo bar={"baz"} /> or <Foo bar="baz" />
+    "no-param-reassign": "off", // We are experienced enough to know when a parameter reassign is good and when it's bad
+    "no-plusplus": "off", // This is the dumbest rule i've ever seen. Every programmer should be able to use unary ++ and -- operators
+    "prefer-template": "off", // Programmers should be able to choose which string syntax is best per case
+    "lines-between-class-members": "off", // Nonsense rule
+    "@next/next/no-img-element": "off", // next/image simply doesn't have the feature set we need
+    "react-hooks/exhaustive-deps": "off", // You don't need to have every dependency in useEffect everytime
+    "no-underscore-dangle": ["error", {"allowAfterThis": true}], // Required for private typescript class members
+    "@typescript-eslint/no-use-before-define": "off", // Using functions, classes and variables before defined should work in JS
+
+    // We want to test a11y elsewhere, not in ESLint
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+
+    "jsx-a11y/anchor-is-valid": "off"
+  }
+}
